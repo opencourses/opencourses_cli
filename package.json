@@ -1,0 +1,32 @@
+{
+  "name": "opencourses",
+  "version": "1.0.0",
+  "description": "This command line script is used to manage one opencourse repository",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencourses/open_courses_scripts.git"
+  },
+  "keywords": [
+    "opencourses",
+    "openeduction"
+  ],
+  "author": "Antonio Langiu <antonio.langiu@studenti.polito.it>",
+  "license": "MIT",
+  "bin": {
+    "opencourses": "./cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/opencourses/open_courses_scripts/issues"
+  },
+  "homepage": "https://github.com/opencourses/open_courses_scripts#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "npm": "^6.0.1",
+    "toml": "^2.3.3",
+    "yargs": "^11.0.0"
+  }
+}
