@@ -35,6 +35,13 @@ the README.md inserted in each repository but also to create the
 course description in the static page of the course.
 '''
 
+# Describe the necessaries tools (i.e., IDE, compilers, etc)
+# required by this course
+usage = '''
+To follow this course you need to use the Eclipse IDE, that
+can be installed following the link: example.com
+'''
+
 #####################################
 #          OPTIONAL FIELDS          #
 #####################################

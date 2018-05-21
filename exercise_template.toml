@@ -1,0 +1,59 @@
+# This is a template for an exercise of a course of the Open Course Project
+# It is written in TOML. You can check the sintax at github.com/toml-lang/toml
+
+#####################################
+#        MANDATORY FIELDS           #
+#####################################
+
+# We will periodically update the exercise template and the version will be used
+# by the parser to see which fields are available and grant back compatibility
+version = 1.0
+
+# Title and subtitle of the exercise
+title="Exercise Title"
+subtitle="Exercise Subtitle"
+
+# Difficulty of the exercise [0-5]
+difficulty = 4
+
+# Tags
+tags = [ 
+    example,
+    sum
+]
+
+# Related exercises
+related = [
+
+]
+
+# Text of the exercise. It is structured in 4 fields:
+# introduction, request, example, output;
+introuction='''
+In this exercise you have to calculate the sum of ten numbers using the C
+language.
+'''
+
+request='''
+10 numbers will be given as arguments of the command line.
+'''
+
+example='''
+The program must be called in the following way:
+./exercise1 1 2 3 4 5 6 7 8 9 10
+'''
+
+output='''
+The desidered output is:
+
+    ./exercise1 1 2 3 4 5 6 7 8 9 10
+    55
+
+'''
+
+# Hints: will be shown in an iterative way on the static page (max 3) 
+hints=[
+    "You need to parse command line arguments",
+    "You can use a for loop",
+    "
+]
