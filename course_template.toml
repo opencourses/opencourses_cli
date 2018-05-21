@@ -14,16 +14,18 @@ title = "Example Course"
 subtitle = "An example on how to create a course"
 
 # Each course can have one or more mantainers
-[maintainers]
-Antonio Langiu
-Lorenzo Moro
+maintainers = [
+"Antonio Langiu",
+"Lorenzo Moro"
+]
 
 # Each course can have one or more contributors
-[contributors]
-Roberta Bardini
+contributors = [
+"Roberta Bardini"
+]
 
 # The GitHub url where the course is pubblished
-url = https://github.com/opencourses/open_courses_scripts
+url = "https://github.com/opencourses/open_courses_scripts"
 
 # The description of the course (you can write in MarkDown)
 description = '''
