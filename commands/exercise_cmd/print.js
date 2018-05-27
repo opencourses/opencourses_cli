@@ -1,7 +1,6 @@
 const chalk = require('chalk');
 var configs = require('../../configs.js');
 var utils = require('../../utils.js');
-var toTOMLString = require('toml-stream').toTOMLString
 
 exports.command = 'print <number>'
 exports.desc = 'Prints the exercise data'

@@ -19,7 +19,7 @@ exports.handler = function (argv) {
 function course_init(argv) {
     // This function should:
     // (0) Check if there is already a
-    if (!argv.force && utils.check_file_existence()) {
+    if (!argv.force && utils.check_file_existence(configs.course_file)) {
         console.log('Your course is already initialized. You can override it using the --force argument');
         process.exit();
     }
