@@ -1,7 +1,14 @@
-exports.command = 'validate <name>'
-exports.desc = 'Validates the content of exercise <name>'
-exports.builder = {}
+exports.command = 'validate <number>'
+exports.desc = 'Validates the content of an exercise folder'
+exports.builder = function(yargs) {
+    return yargs.number('number');
+}
 exports.handler = function (argv) {
-    console.log('Validates the content of exercise '+argv.name)
+    validate(argv);
+}
+
+function validate(argv) {
+    // This function must compare the content of the exercise toml with the
+    // template file
 }
 

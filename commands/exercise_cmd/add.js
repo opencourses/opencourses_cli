@@ -39,7 +39,7 @@ function add(argv) {
         });
     } else {
         if (!utils.check_dir_existence('templates/'+argv.template)) {
-            console.error("To create an exercise from a template you need to have the template folder");
+            console.error("The template "+argv.template+" does not exists");
             return;
         }
         ncp('templates/'+argv.template, configs.parsed.exercise_dir + '/' + name, function(err) {
@@ -50,6 +50,5 @@ function add(argv) {
             console.log("Exercise created");
         });
     }
-
 }
 

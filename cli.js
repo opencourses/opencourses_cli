@@ -2,9 +2,8 @@
 
 const chalk = require('chalk')
 var yargs = require('yargs')
-var configs = require('./configs.js')
-var utils = require('./utils.js');
-
+var configs = require('./configs')
+var utils = require('./utils');
 
 configs.read_config_file(function(err) {
     if (err) {
@@ -13,7 +12,7 @@ configs.read_config_file(function(err) {
     }
     yargs.commandDir('commands')
         .epilogue('You can read more about the Open Courses project on https://github.com/opencourses/manifesto')
-        .demandCommand()
+        .demandCommand(1, 'You need at least one command before moving on')
         .help()
         .argv
 });

@@ -18,8 +18,8 @@ difficulty = 4
 
 # Tags
 tags = [ 
-    example,
-    sum
+    'example',
+    'sum'
 ]
 
 # Related exercises
@@ -29,7 +29,7 @@ related = [
 
 # Text of the exercise. It is structured in 4 fields:
 # introduction, request, example, output;
-introuction='''
+introduction='''
 In this exercise you have to calculate the sum of ten numbers using the C
 language.
 '''
@@ -54,6 +54,5 @@ The desidered output is:
 # Hints: will be shown in an iterative way on the static page (max 3) 
 hints=[
     "You need to parse command line arguments",
-    "You can use a for loop",
-    "
+    "You can use a for loop"
 ]
