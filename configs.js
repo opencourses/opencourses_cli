@@ -2,33 +2,40 @@ const chalk = require('chalk');
 var toml = require('toml');
 var concat = require('concat-stream');
 var fs = require('fs');
-
-var my_course_file = 'course.toml';
-var my_course_template = 'course_template.toml'
-var my_course_file_parsed;
+var utils = require('./utils.js');
 
 module.exports = {
-    course_file: my_course_file,
-    course_template: my_course_template,
-    course_file_parsed: my_course_file_parsed,
+    course_file: 'course.toml',
+    course_template: 'course_template.toml',
+    parsed: {},
 
-    check_file_existence: function() {
-        if (!fs.existsSync(my_course_file)) {
-            return false;
+    read_config_file: function(callback) {
+        if (!utils.check_file_existence(this.course_template)) {
+            return callback(new Error('The file is not present'));
         }
-        return true;
-    },
-
-    read_config_file: function() {
-        fs.createReadStream(my_course_file, 'utf8').pipe(concat(function(data) {
+        fs.createReadStream(this.course_file, 'utf8').pipe(concat(function(data) {
             try {
-                my_course_file_parsed = toml.parse(data);
+                module.exports.parsed = toml.parse(data);
             } catch (e) {
-                console.error("Error parsing the %s file\n", my_course_file);
+                console.error("Error parsing the " + this.course_file + " file");
                 console.error("Parsing error on line " + e.line + ", column " + e.column +
                     ": " + e.message);
-                process.exit(1);
+                return callback(e);
             }
+            set_defaults();
+            return callback(null);
         }));
+    }
+}
+
+function set_defaults() {
+    var defaults = {
+        exercise_dir: "exercises",
+        exercise_prefix: "exercise"
+    }
+    for (const [key, value] of Object.entries(defaults)) {
+        if (isNaN(module.exports.parsed[key])) {
+            module.exports.parsed[key] = value;
+        }
     }
 }
