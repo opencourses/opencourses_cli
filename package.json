@@ -29,6 +29,7 @@
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "npm": "^6.1.0",
+    "prompt": "^1.0.0",
     "toml": "github:AntonioLangiu/toml-node#preserve_comment",
     "toml-stream": "github:AntonioLangiu/toml-stream#dump_comment",
     "yargs": "^11.1.0"
