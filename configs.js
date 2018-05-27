@@ -10,7 +10,7 @@ module.exports = {
     parsed: {},
 
     read_config_file: function(callback) {
-        if (!utils.check_file_existence(this.course_template)) {
+        if (!utils.check_file_existence(this.course_file)) {
             return callback(new Error('The file is not present'));
         }
         fs.createReadStream(this.course_file, 'utf8').pipe(concat(function(data) {
