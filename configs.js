@@ -31,7 +31,8 @@ module.exports = {
 function set_defaults() {
     var defaults = {
         exercise_dir: "exercises",
-        exercise_prefix: "exercise"
+        exercise_prefix: "exercise",
+        exercise_schema: "exercise_schema.json"
     }
     for (const [key, value] of Object.entries(defaults)) {
         if (isNaN(module.exports.parsed[key])) {

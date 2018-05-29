@@ -15,8 +15,8 @@ subtitle = "An example on how to create a course"
 
 # Each course can have one or more mantainers
 maintainers = [
-"Antonio Langiu",
-"Lorenzo Moro"
+"Antonio Langiu <antonio.langiu@studenti.polito.it>",
+"Lorenzo Moro <lorenzo.moro@studenti.polito.it>"
 ]
 
 # Each course can have one or more contributors
@@ -47,7 +47,7 @@ can be installed following the link: example.com
 #####################################
 
 # This field defines the folder where the exercises are inserted
-exercise_dir = "exercise"
+exercise_dir = "exercises"
 
 # The name used to define an exercise (for example: exercise01)
 exercise_prefix = "exercise"
