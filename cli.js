@@ -28,6 +28,5 @@ configs.read_config_file(function(err) {
             choices: ['error', 'warning', 'info', 'debug']
         })
         .help()
-        .middleware([set_logger])
         .argv
 });
